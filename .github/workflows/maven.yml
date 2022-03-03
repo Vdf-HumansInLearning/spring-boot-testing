@@ -43,6 +43,8 @@ jobs:
            curl -Os https://uploader.codecov.io/latest/alpine/codecov
            chmod +x codecov
            ./codecov -t ${CODECOV_TOKEN}
+    - name: Docker Setup Buildx
+      run: docker build -t vdf/vdf-emp .
     - name: OWASP ZAP API Scan
       # You may pin to the exact commit or the version.
       # uses: zaproxy/action-api-scan@a9df88b5d8ee723800c93d6c74365781652dd89b
