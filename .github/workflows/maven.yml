@@ -46,6 +46,7 @@ jobs:
     - name: OWASP ZAP API Scan
       # You may pin to the exact commit or the version.
       # uses: zaproxy/action-api-scan@a9df88b5d8ee723800c93d6c74365781652dd89b
+      if: always()
       uses: zaproxy/action-api-scan@v0.1.0
     - name: Build and analyze
       env:
