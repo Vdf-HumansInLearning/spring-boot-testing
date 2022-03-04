@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(
     classes = DemoApplication.class)
 @AutoConfigureMockMvc
-public class DemoApplicationTests {
+public class DemoApplicationTest {
 
     //    curl -X POST http://localhost:8080/api/employees -d '{"firstName": "Test1"}' -H 'Content-Type: application/json' -v
 
