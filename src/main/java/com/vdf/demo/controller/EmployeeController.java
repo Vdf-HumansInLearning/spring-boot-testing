@@ -1,4 +1,4 @@
-package com.vdf.demo;
+package com.vdf.demo.controller;
 
 import com.vdf.demo.model.Employee;
 import com.vdf.demo.persistence.EmployeeRepository;
