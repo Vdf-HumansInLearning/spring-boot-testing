@@ -2,10 +2,16 @@ package com.vdf.demo.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import lombok.Data;
 
@@ -26,6 +32,13 @@ public class Employee {
 
     private BigDecimal salary;
 
-    private String role;
+    private transient String role;
+
+    @OneToOne
+    @JoinColumn(name = "address_id")
+    private Address address;
+
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Account> accounts;
 
 }
