@@ -34,7 +34,7 @@ public class Employee {
 
     private transient String role;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
 
